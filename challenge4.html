@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Challenge 5</title>
+    <style>
+    body{
+        margin: 2%;
+        border: 1px solid black;
+        background-color: #b3b3b3;
+    }
+    #image{
+        line-height:325px;
+        width: 388px;
+        height: 325px;
+        border:5px solid black;
+        margin:0 auto;
+        background-repeat: no-repeat;
+        color:#FFFFFF;
+        text-align: center;
+        background-color: #8e68ff;
+        background-size: cover;
+        margin-bottom:25px;
+        font-size:150%;
+    }
+    .preview{
+        width:10%;
+        margin-left:17%;
+        border: 10px solid black;
+    }
+    img{
+        width:95%;
+    }
+    h1{
+        text-align: center;
+    }
+    </style>
+
+    <script>
+    function upDate(previewPic){
+      console.log(previewPic)
+      document.querySelector("#image").innerHTML = previewPic.alt
+      var source = previewPic.src
+      document.querySelector("#image").style.backgroundImage = "url("+source+")";
+
+ /* In this function you should 
+    1) change the url for the background image of the div with the id = "image" 
+    to the source file of the preview image
+    
+    2) Change the text  of the div with the id = "image" 
+    to the alt text of the preview image 
+    */
+  
+    }
+
+    function unDo(){
+     /* In this function you should 
+    1) Update the url for the background image of the div with the id = "image" 
+    back to the orginal-image.  You can use the css code to see what that original URL was
+    
+    2) Change the text  of the div with the id = "image" 
+    back to the original text.  You can use the html code to see what that original text was
+    */
+        document.querySelector("#image").style.backgroundColor = "#8e68ff"
+        document.querySelector("#image").style.backgroundImage = "none"
+        document.querySelector("#image").innerHTML = "Hover or tab over/into an image below."
+        
+    }
+    </script>
+</head>
+
+<body>
+    <h1>Challenge 5</h1>
+        <div id = "image">
+            Hover or tab over/into an image below.
+        </div>
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" tabindex = "1"
+            alt = "Road" 
+            src = "https://images.freeimages.com/images/small-previews/bf4/the-road-through-the-woods-1449194.jpg"
+            onfocus="upDate(this)" onmouseover = "upDate(this)" onmouseleave = "unDo()";>
+
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->  
+        <img class = "preview" tabindex="2"
+            alt = "Fox" 
+            src = "https://images.freeimages.com/images/small-previews/72c/fox-1522156.jpg"
+            onfocus="upDate(this)" onmouseover = "upDate(this)" onmouseleave = "unDo()";>
+    
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->
+        <img class = "preview" tabindex="3"
+            alt = "Poppies"
+            src = "https://images.freeimages.com/images/small-previews/b74/wild-poppies-1384853.jpg"
+            onfocus="upDate(this)" onmouseover = "upDate(this)" onmouseleave = "unDo()";>
+
+        <img class = "preview" tabindex="4"
+            alt = "Sun" 
+            src = "https://images.freeimages.com/images/small-previews/047/headed-down-1400175.jpg"
+            onfocus="upDate(this)"onmouseover = "upDate(this)" onmouseleave = "unDo()";>
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->  
+        <img class = "preview" tabindex="5"
+            alt = "Sunflower" 
+            src = "https://images.freeimages.com/images/small-previews/48d/marguerite-1372118.jpg"
+            onfocus="upDate(this)" onmouseover = "upDate(this)" onmouseleave = "unDo()";>
+
+        <!-- Your code goes in the img tag below.  Make sure to react to "hovering" and "tabbing": -->  
+        <img class = "preview" tabindex="6"
+            alt = "Baloons" 
+            src = "https://images.freeimages.com/images/small-previews/d1f/balloon-contest-1417733.jpg"
+            onfocus="upDate(this)" onmouseover = "upDate(this)" onmouseleave = "unDo()";>
+</body>
+</html>
+    
